@@ -1,7 +1,7 @@
 // REACT
 import React from "react";
 // IMAGES
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 import children from "../assets/children.png";
 
 class Rules extends React.Component {
