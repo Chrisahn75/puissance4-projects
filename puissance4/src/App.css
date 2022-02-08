@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Font family */
+@font-face {
+  font-family: "oleo bold";
+  src: url("./font-family/Oleo_Script/OleoScript-Bold.ttf");
+}
+@font-face {
+  font-family: "oleo regular";
+  src: url("./font-family/Oleo_Script/OleoScript-Regular.ttf");
+}
+
+/* Font-size */
+html {
+  font-size: 62.5%;
+}
+/* Font-family by default */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+/* Main blocks */
+main {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+}
+section {
+  display: flex;
+  width: 100vw;
+  height: 85vh;
+  max-width: 100%;
+  border: 1px solid green;
+}
+
+/* Title box */
+.title {
+  text-align: center;
+  height: 15vh;
+}
+h1 {
+  font-size: 7rem;
+  font-family: "oleo bold";
+  color: #f15930;
+}
+
+/* Game Rules box */
+.gameRules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+  border: 1px solid black;
+  padding: 1rem;
+}
+.gameRules p {
+  margin-bottom: 1rem;
+}
+.logo {
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+.children {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+}
+.ref {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.separator {
+  background: #0057a6;
+  height: 0.1rem;
+  width: 90%;
+  margin-bottom: 1rem;
+}
+.rules {
+  text-align: justify;
+}
+
+/* Grid box */
+.board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75vw;
+  max-width: 100%;
+  border: 1px solid red;
+}
+table {
+  border-spacing: 0;
+  margin: auto;
+}
+.cell {
+  height: 7rem;
+  width: 7rem;
+  background-color: #0057a6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.white {
+  height: 6rem;
+  width: 6rem;
+  background-color: white;
+  border-radius: 50%;
+}
+.red {
+  height: 6rem;
+  width: 6rem;
+  background-color: #f15930;
+  border-radius: 50%;
+  transition: background-color 0.5s;
+}
+.yellow {
+  height: 6rem;
+  width: 6rem;
+  background-color: #ffd700;
+  border-radius: 50%;
+  transition: background-color 0.5s;
+}
+.message {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0rem auto 1rem auto;
+}
+
+/* Reset Button */
+.button {
+  background-color: #f15930;
+  color: white;
+  height: 4rem;
+  width: 10rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  margin: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+}
+.button:hover {
+  background-color: orange;
+  color: black;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/*************** MEDIA QUERIES *****************/
+
+@media only screen and (max-width: 992px) {
+  main,
+  section,
+  .title {
+    height: auto;
+  }
+  h1 {
+    font-size: 4.5rem;
+  }
+  section {
+    flex-direction: column;
+  }
+  .gameRules,
+  .board {
+    width: 100vw;
+  }
+  .table {
+    width: 100%;
+  }
+  .cell {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+  .white,
+  .red,
+  .yellow {
+    width: 3rem;
+    height: 3rem;
+  }
+}
