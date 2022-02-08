@@ -32,21 +32,65 @@ main {
 section {
   display: flex;
   width: 100vw;
-  height: 85vh;
+  height: 100vh;
   max-width: 100%;
-  border: 1px solid green;
 }
 
-/* Title box */
-.title {
-  text-align: center;
-  height: 15vh;
-}
 h1 {
+  text-align: center;
+  text-shadow: 2px 0 0 rgb(255, 255, 255), -2px 0 0 rgb(255, 255, 255),
+    0 2px 0 rgb(255, 255, 255), 0 -2px 0 rgb(255, 255, 255),
+    1px 1px rgb(255, 255, 255), -1px -1px 0 rgb(255, 255, 255),
+    1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255);
   font-size: 7rem;
   font-family: "oleo bold";
   color: #f15930;
 }
+
+/* TEST ANIMATION */
+.message {
+  font-family: "oleo regular";
+  animation: 2s message ease infinite;
+  color: white;
+}
+
+@keyframes message {
+  0% {
+    color: white;
+    transform: scale(0);
+    opacity: 0;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    text-shadow: 2px 0 0 red, -2px 0 0 red, 0 2px 0 red, 0 -2px 0 red,
+      1px 1px red, -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red;
+  }
+  25% {
+    color: red;
+    transform: scale(2);
+    opacity: 1;
+    text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 0 0 rgb(255, 255, 255), -2px 0 0 rgb(255, 255, 255),
+      0 2px 0 rgb(255, 255, 255), 0 -2px 0 rgb(255, 255, 255),
+      1px 1px rgb(255, 255, 255), -1px -1px 0 rgb(255, 255, 255),
+      1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255);
+  }
+  50% {
+    color: white;
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    text-shadow: 2px 0 0 red, -2px 0 0 red, 0 2px 0 red, 0 -2px 0 red,
+      1px 1px red, -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red;
+  }
+  100% {
+    /* animate nothing to add pause at the end of animation */
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    text-shadow: 2px 0 0 red, -2px 0 0 red, 0 2px 0 red, 0 -2px 0 red,
+      1px 1px red, -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red;
+  }
+}
+/* END TEST ANIMATION */
 
 /* Game Rules box */
 .gameRules {
@@ -54,8 +98,10 @@ h1 {
   flex-direction: column;
   align-items: center;
   width: 25vw;
-  border: 1px solid black;
+  height: 100vh;
+  border-right: 0.2rem solid #0057a6;
   padding: 1rem;
+  background: #f3b98e;
 }
 .gameRules p {
   margin-bottom: 1rem;
@@ -63,20 +109,24 @@ h1 {
 .logo {
   width: 10rem;
   height: 10rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
 }
 .children {
   width: 5rem;
   height: 5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .ref {
   font-size: 1.6rem;
   font-weight: bold;
 }
+
+.players {
+  margin-bottom: 2rem !important;
+}
 .separator {
   background: #0057a6;
-  height: 0.1rem;
+  height: 0.2rem;
   width: 90%;
   margin-bottom: 1rem;
 }
@@ -91,8 +141,10 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 75vw;
+  height: 100vh;
   max-width: 100%;
-  border: 1px solid red;
+  background: url(./assets/kidsroom.jpg) no-repeat center / cover;
+  /* filter: blur(4px); */
 }
 table {
   border-spacing: 0;
@@ -107,6 +159,7 @@ table {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  opacity: 0.9;
 }
 .white {
   height: 6rem;
@@ -174,6 +227,7 @@ table {
   .gameRules,
   .board {
     width: 100vw;
+    height: auto;
   }
   .table {
     width: 100%;

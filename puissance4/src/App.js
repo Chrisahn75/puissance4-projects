@@ -4,9 +4,7 @@ import React from "react";
 import "./App.css";
 // COMPONENT
 import Row from "./components/Row";
-// IMAGES
-import logo from "./assets/logo.jpg";
-import children from "./assets/children.png";
+import Rules from "./components/Rules";
 
 class App extends React.Component {
   constructor() {
@@ -93,6 +91,7 @@ class App extends React.Component {
     for (let r = 3; r < 6; r++) {
       for (let c = 0; c < 7; c++) {
         if (board[r][c]) {
+          // CHECK IF OUR TOKENS ARE ALL IN THE SAME COLUMN
           if (
             board[r][c] === board[r - 1][c] &&
             board[r][c] === board[r - 2][c] &&
@@ -177,6 +176,7 @@ class App extends React.Component {
     );
   }
 
+  // A checker
   componentWillMount() {
     this.initBoard();
   }
@@ -184,35 +184,13 @@ class App extends React.Component {
   render() {
     return (
       <main>
-        <div className="title">
-          <h1>Puissance 4</h1>
-        </div>
-
         <section>
-          <aside className="gameRules">
-            <img className="logo" src={logo} alt="logo jeu"></img>
-            <img className="children" src={children} alt="children" />
-            <p className="ref">6 ans-Adulte</p>
-            <p className="ref">2 joueurs</p>
-            <div className="separator"></div>
-            <p className="rules">
-              Insérez un jeton dans la grille à tour de rôle. Le premier joueur
-              qui réussit à aligner quatre jetons (horizontalement,
-              verticalement ou diagonalement) gagne la partie.
-            </p>
-            <p className="rules">
-              Si toutes les cases de la grille sont remplies et qu'aucun des
-              deux joueurs n'a réalisé un tel alignement, la partie est déclarée
-              nulle.
-            </p>
-            <p className="rules">
-              Appuyez sur le bouton "Reset" pour commencer une nouvelle partie.
-            </p>
-          </aside>
-
+          <Rules />
           <div className="board">
+            <h1>Puissance 4</h1>
             <p className="message">{this.state.message}</p>
 
+            {/* BOARD */}
             <table>
               <tbody>
                 {this.state.board.map((row, i) => (
@@ -221,6 +199,7 @@ class App extends React.Component {
               </tbody>
             </table>
 
+            {/* RESET BUTTON */}
             <div
               className="button"
               onClick={() => {
