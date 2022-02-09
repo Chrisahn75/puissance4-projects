@@ -42,6 +42,7 @@ class App extends React.Component {
       board.push(row);
     }
 
+    // STATE MODIFICATION
     this.setState({
       board,
       currentPlayer: this.state.player1,
@@ -76,7 +77,6 @@ class App extends React.Component {
 
       // CHECK BOARD STATUS
       let result = this.checkAllMoves(board);
-
       if (result === this.state.player1) {
         this.setState({
           board,
@@ -193,7 +193,7 @@ class App extends React.Component {
     );
   }
 
-  // A CHECKER
+  // INITIATE BOARD WHEN FIRST APPEARS ON SCREEN
   componentDidMount() {
     this.initBoard();
   }
