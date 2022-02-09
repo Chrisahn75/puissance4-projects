@@ -54,6 +54,7 @@ class App extends React.Component {
     // PLACE TOKEN AT BOTTOM OF THE BOARD
     if (!this.state.gameOver) {
       let board = this.state.board;
+
       for (let r = 5; r >= 0; r--) {
         // A checker
         if (!board[r][c]) {
@@ -64,6 +65,7 @@ class App extends React.Component {
 
       // Check status of board
       let result = this.checkAll(board);
+
       if (result === this.state.player1) {
         this.setState({
           board,
@@ -82,7 +84,9 @@ class App extends React.Component {
         this.setState({ board, currentPlayer: this.togglePlayer() });
       }
     } else {
-      this.setState({ message: "Game over. Please start a new game." });
+      this.setState({
+        message: "Game over. Click on the reset button to start a new game.",
+      });
     }
   }
 
@@ -176,7 +180,7 @@ class App extends React.Component {
     );
   }
 
-  // A checker
+  // A checker - message d'erreur dans la console
   componentWillMount() {
     this.initBoard();
   }

@@ -10,7 +10,7 @@ class Rules extends React.Component {
       <aside className="gameRules">
         {/* <img className="logo" src={logo} alt="logo jeu"></img> */}
         <div className="logoTitle">
-          <p>
+          <p className="title">
             <span className="letterM">M</span>
             <span className="letterB">B</span>
           </p>
@@ -26,7 +26,7 @@ class Rules extends React.Component {
         <div className="separator"></div>
 
         <div className="rules">
-          <p className="r1">
+          <p>
             Insérez un jeton dans la grille à tour de rôle. Le premier joueur
             qui réussit à aligner quatre jetons (horizontalement, verticalement
             ou diagonalement) gagne la partie.

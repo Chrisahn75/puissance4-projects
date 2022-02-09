@@ -102,6 +102,7 @@ h1 {
 .gameRules {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 25vw;
   height: 100vh;
@@ -109,10 +110,6 @@ h1 {
   border-right: 0.3rem solid #f15930;
   padding: 1rem;
   background: #f3b98e;
-}
-.ref p,
-.rules p {
-  margin-bottom: 1rem;
 }
 /* .logo {
   width: 10rem;
@@ -126,6 +123,12 @@ h1 {
   text-align: center;
   margin-bottom: 3rem;
   line-height: 1;
+}
+.title {
+  text-shadow: 2px 0 0 rgb(255, 255, 255), -2px 0 0 rgb(255, 255, 255),
+    0 2px 0 rgb(255, 255, 255), 0 -2px 0 rgb(255, 255, 255),
+    1px 1px rgb(255, 255, 255), -1px -1px 0 rgb(255, 255, 255),
+    1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255);
 }
 .letterM {
   color: #f15930;
@@ -149,7 +152,10 @@ h1 {
   font-weight: bold;
   text-align: center;
 }
-
+.ref p,
+.rules p {
+  margin-bottom: 1rem;
+}
 .players {
   margin-bottom: 2rem !important;
 }
@@ -161,10 +167,6 @@ h1 {
 }
 .rules {
   text-align: justify;
-}
-
-.r1 {
-  margin-top: 1rem;
 }
 
 /* Grid box */
