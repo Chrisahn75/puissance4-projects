@@ -13,13 +13,23 @@
   src: url("./font-family/Oleo_Script/OleoScript-Regular.ttf");
 }
 
+@font-face {
+  font-family: "anton";
+  src: url("./font-family/Anton-Regular.ttf");
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("./font-family/RobotoCondensed-Bold.ttf");
+}
+
 /* Font-size */
 html {
   font-size: 62.5%;
 }
 /* Font-family by default */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
   font-size: 1.5rem;
 }
 
@@ -95,38 +105,67 @@ h1 {
 .gameRules {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 25vw;
   height: 100vh;
-  border-right: 0.2rem solid #0057a6;
+  /* border-right: 0.3rem solid #2858a1; */
+  border-right: 0.3rem solid #f15930;
   padding: 1rem;
   background: #f3b98e;
 }
-.gameRules p {
-  margin-bottom: 1rem;
-}
-.logo {
+/* .logo {
   width: 10rem;
   height: 10rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+} */
+.logoTitle {
+  font-family: "anton";
+  font-weight: 400;
+  font-size: 7.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1;
+}
+.title {
+  text-shadow: 2px 0 0 rgb(255, 255, 255), -2px 0 0 rgb(255, 255, 255),
+    0 2px 0 rgb(255, 255, 255), 0 -2px 0 rgb(255, 255, 255),
+    1px 1px rgb(255, 255, 255), -1px -1px 0 rgb(255, 255, 255),
+    1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255);
+}
+.letterM {
+  color: #f15930;
+}
+.letterB {
+  color: #2858a1;
+}
+.subtitle {
+  font-size: 3rem;
+  font-family: "roboto";
+  font-weight: 800;
+  text-align: center;
 }
 .children {
   width: 5rem;
   height: 5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .ref {
   font-size: 1.6rem;
   font-weight: bold;
+  text-align: center;
 }
-
+.ref p,
+.rules p {
+  margin-bottom: 1rem;
+}
 .players {
   margin-bottom: 2rem !important;
 }
 .separator {
-  background: #0057a6;
-  height: 0.2rem;
-  width: 90%;
+  background: #2858a1;
+  height: 0.3rem;
+  width: 70%;
   margin-bottom: 1rem;
 }
 .rules {
@@ -152,7 +191,7 @@ table {
 .cell {
   height: 7rem;
   width: 7rem;
-  background-color: #0057a6;
+  background-color: #2858a1;
   display: flex;
   flex-direction: row;
   justify-content: center;
