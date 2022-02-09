@@ -13,13 +13,23 @@
   src: url("./font-family/Oleo_Script/OleoScript-Regular.ttf");
 }
 
+@font-face {
+  font-family: "anton";
+  src: url("./font-family/Anton-Regular.ttf");
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("./font-family/RobotoCondensed-Bold.ttf");
+}
+
 /* Font-size */
 html {
   font-size: 62.5%;
 }
 /* Font-family by default */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
   font-size: 1.5rem;
 }
 
@@ -95,17 +105,39 @@ h1 {
   align-items: center;
   width: 25vw;
   height: 100vh;
-  border-right: 0.3rem solid #2858a1;
+  /* border-right: 0.3rem solid #2858a1; */
+  border-right: 0.3rem solid #f15930;
   padding: 1rem;
   background: #f3b98e;
 }
-.gameRules p {
+.ref p,
+.rules p {
   margin-bottom: 1rem;
 }
-.logo {
+/* .logo {
   width: 10rem;
   height: 10rem;
   margin-bottom: 3rem;
+} */
+.logoTitle {
+  font-family: "anton";
+  font-weight: 400;
+  font-size: 7.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1;
+}
+.letterM {
+  color: #f15930;
+}
+.letterB {
+  color: #2858a1;
+}
+.subtitle {
+  font-size: 3rem;
+  font-family: "roboto";
+  font-weight: 800;
+  text-align: center;
 }
 .children {
   width: 5rem;
@@ -115,6 +147,7 @@ h1 {
 .ref {
   font-size: 1.6rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .players {
