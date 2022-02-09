@@ -95,7 +95,7 @@ h1 {
   align-items: center;
   width: 25vw;
   height: 100vh;
-  border-right: 0.2rem solid #0057a6;
+  border-right: 0.3rem solid #2858a1;
   padding: 1rem;
   background: #f3b98e;
 }
@@ -105,7 +105,7 @@ h1 {
 .logo {
   width: 10rem;
   height: 10rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 .children {
   width: 5rem;
@@ -121,13 +121,17 @@ h1 {
   margin-bottom: 2rem !important;
 }
 .separator {
-  background: #0057a6;
-  height: 0.2rem;
-  width: 90%;
+  background: #2858a1;
+  height: 0.3rem;
+  width: 70%;
   margin-bottom: 1rem;
 }
 .rules {
   text-align: justify;
+}
+
+.r1 {
+  margin-top: 1rem;
 }
 
 /* Grid box */

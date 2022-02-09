@@ -13,7 +13,7 @@ class Rules extends React.Component {
         <p className="ref">6 ans-Adulte</p>
         <p className="ref players">2 joueurs</p>
         <div className="separator"></div>
-        <p className="rules">
+        <p className="rules r1">
           Insérez un jeton dans la grille à tour de rôle. Le premier joueur qui
           réussit à aligner quatre jetons (horizontalement, verticalement ou
           diagonalement) gagne la partie.
