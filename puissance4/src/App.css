@@ -105,7 +105,6 @@ h1 {
 .gameRules {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   align-items: center;
   width: 25vw;
   height: 100vh;
@@ -114,11 +113,7 @@ h1 {
   padding: 1rem;
   background: #f3b98e;
 }
-/* .logo {
-  width: 10rem;
-  height: 10rem;
-  margin-bottom: 3rem;
-} */
+
 .logoTitle {
   font-family: "anton";
   font-weight: 400;
@@ -158,7 +153,6 @@ h1 {
 .ref p,
 .rules p {
   margin-bottom: 1rem;
-  padding: 1rem;
 }
 .players {
   margin-bottom: 2rem !important;
@@ -171,7 +165,10 @@ h1 {
 }
 .rules {
   text-align: justify;
-  padding-top: 3rem;
+}
+
+.r1 {
+  margin-top: 2rem;
 }
 
 /* Grid box */

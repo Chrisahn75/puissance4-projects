@@ -4,6 +4,7 @@
 //          DEFINES PLAYER'S CELL COLOR & MAKE IT CLICKABLE       //
 //                                                                //
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
 // REACT
 import React from "react";
 
