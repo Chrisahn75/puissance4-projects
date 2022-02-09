@@ -59,11 +59,12 @@ h1 {
     color: white;
     transform: scale(0);
     opacity: 0;
-    text-shadow: 2px 0 0 red, -2px 0 0 red, 0 2px 0 red, 0 -2px 0 red,
-      1px 1px red, -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red;
+    text-shadow: 2px 0 0 #f15930, -2px 0 0 #f15930, 0 2px 0 #f15930,
+      0 -2px 0 #f15930, 1px 1px #f15930, -1px -1px 0 #f15930, 1px -1px 0 #f15930,
+      -1px 1px 0 #f15930;
   }
   25% {
-    color: red;
+    color: #f15930;
     transform: scale(2);
     opacity: 1;
     text-shadow: 2px 0 0 rgb(255, 255, 255), -2px 0 0 rgb(255, 255, 255),
@@ -75,15 +76,17 @@ h1 {
     color: white;
     transform: scale(1);
     opacity: 1;
-    text-shadow: 2px 0 0 red, -2px 0 0 red, 0 2px 0 red, 0 -2px 0 red,
-      1px 1px red, -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red;
+    text-shadow: 2px 0 0 #f15930, -2px 0 0 #f15930, 0 2px 0 #f15930,
+      0 -2px 0 #f15930, 1px 1px #f15930, -1px -1px 0 #f15930, 1px -1px 0 #f15930,
+      -1px 1px 0 #f15930;
   }
   100% {
     /* animate nothing to add pause at the end of animation */
     transform: scale(1);
     opacity: 1;
-    text-shadow: 2px 0 0 red, -2px 0 0 red, 0 2px 0 red, 0 -2px 0 red,
-      1px 1px red, -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red;
+    text-shadow: 2px 0 0 #f15930, -2px 0 0 #f15930, 0 2px 0 #f15930,
+      0 -2px 0 #f15930, 1px 1px #f15930, -1px -1px 0 #f15930, 1px -1px 0 #f15930,
+      -1px 1px 0 #f15930;
   }
 }
 /* END TEST ANIMATION */
@@ -179,7 +182,7 @@ table {
 }
 .message {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0rem auto 1rem auto;
 }
 
