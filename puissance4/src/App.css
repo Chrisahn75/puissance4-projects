@@ -69,11 +69,12 @@ h1 {
     color: white;
     transform: scale(0);
     opacity: 0;
-    text-shadow: 2px 0 0 red, -2px 0 0 red, 0 2px 0 red, 0 -2px 0 red,
-      1px 1px red, -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red;
+    text-shadow: 2px 0 0 #f15930, -2px 0 0 #f15930, 0 2px 0 #f15930,
+      0 -2px 0 #f15930, 1px 1px #f15930, -1px -1px 0 #f15930, 1px -1px 0 #f15930,
+      -1px 1px 0 #f15930;
   }
   25% {
-    color: red;
+    color: #f15930;
     transform: scale(2);
     opacity: 1;
     text-shadow: 2px 0 0 rgb(255, 255, 255), -2px 0 0 rgb(255, 255, 255),
@@ -85,15 +86,17 @@ h1 {
     color: white;
     transform: scale(1);
     opacity: 1;
-    text-shadow: 2px 0 0 red, -2px 0 0 red, 0 2px 0 red, 0 -2px 0 red,
-      1px 1px red, -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red;
+    text-shadow: 2px 0 0 #f15930, -2px 0 0 #f15930, 0 2px 0 #f15930,
+      0 -2px 0 #f15930, 1px 1px #f15930, -1px -1px 0 #f15930, 1px -1px 0 #f15930,
+      -1px 1px 0 #f15930;
   }
   100% {
     /* animate nothing to add pause at the end of animation */
     transform: scale(1);
     opacity: 1;
-    text-shadow: 2px 0 0 red, -2px 0 0 red, 0 2px 0 red, 0 -2px 0 red,
-      1px 1px red, -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red;
+    text-shadow: 2px 0 0 #f15930, -2px 0 0 #f15930, 0 2px 0 #f15930,
+      0 -2px 0 #f15930, 1px 1px #f15930, -1px -1px 0 #f15930, 1px -1px 0 #f15930,
+      -1px 1px 0 #f15930;
   }
 }
 /* END TEST ANIMATION */
@@ -102,7 +105,6 @@ h1 {
 .gameRules {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   width: 25vw;
   height: 100vh;
@@ -111,11 +113,7 @@ h1 {
   padding: 1rem;
   background: #f3b98e;
 }
-/* .logo {
-  width: 10rem;
-  height: 10rem;
-  margin-bottom: 3rem;
-} */
+
 .logoTitle {
   font-family: "anton";
   font-weight: 400;
@@ -169,6 +167,10 @@ h1 {
   text-align: justify;
 }
 
+.r1 {
+  margin-top: 2rem;
+}
+
 /* Grid box */
 .board {
   display: flex;
@@ -218,7 +220,7 @@ table {
 }
 .message {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0rem auto 1rem auto;
 }
 

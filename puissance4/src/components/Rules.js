@@ -1,3 +1,10 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//                          RULES.JS                              //
+//                      LINKED TO APP.JS                          //
+//          HTML PART THAT SHOW RULES ON THE LEFT SIDE            //
+//                                                                //
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
 // REACT
 import React from "react";
 // IMAGES
@@ -26,7 +33,7 @@ class Rules extends React.Component {
         <div className="separator"></div>
 
         <div className="rules">
-          <p>
+          <p className="r1">
             Insérez un jeton dans la grille à tour de rôle. Le premier joueur
             qui réussit à aligner quatre jetons (horizontalement, verticalement
             ou diagonalement) gagne la partie.
