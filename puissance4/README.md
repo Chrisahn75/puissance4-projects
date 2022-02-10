@@ -1,3 +1,7 @@
+# Click on the link below to start playing
+
+## https://chrisahn75.github.io/puissance4-projects/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
