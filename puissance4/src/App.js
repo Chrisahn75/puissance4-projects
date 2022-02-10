@@ -10,7 +10,7 @@ class App extends React.Component {
   constructor() {
     super();
     // BINDS
-    this.play = this.play.bind(this);
+   
   }
 
   // INITIATE NEW GAME
