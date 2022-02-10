@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d6e4c128.css",
+    "main.js": "/static/js/main.394d4723.js",
+    "static/js/787.58f1ea9e.chunk.js": "/static/js/787.58f1ea9e.chunk.js",
+    "static/media/kidsroom.jpg": "/static/media/kidsroom.1912ecaa7dd6c8b1f177.jpg",
+    "static/media/RobotoCondensed-Bold.ttf": "/static/media/RobotoCondensed-Bold.c5fe6deebafaec078e64.ttf",
+    "static/media/Anton-Regular.ttf": "/static/media/Anton-Regular.170b842f9a8cd6150a0d.ttf",
+    "static/media/OleoScript-Regular.ttf": "/static/media/OleoScript-Regular.fe131114c0882f16def0.ttf",
+    "static/media/OleoScript-Bold.ttf": "/static/media/OleoScript-Bold.49551f0a3cf38006d52b.ttf",
+    "index.html": "/index.html",
+    "main.d6e4c128.css.map": "/static/css/main.d6e4c128.css.map",
+    "main.394d4723.js.map": "/static/js/main.394d4723.js.map",
+    "787.58f1ea9e.chunk.js.map": "/static/js/787.58f1ea9e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6e4c128.css",
+    "static/js/main.394d4723.js"
+  ]
+}
