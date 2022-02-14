@@ -12,6 +12,7 @@ import "./App.css";
 // COMPONENT
 import Row from "./components/Row";
 import Rules from "./components/Rules";
+import Timer from "./components/Timer";
 
 class App extends React.Component {
   constructor() {
@@ -24,10 +25,14 @@ class App extends React.Component {
       board: [],
       gameOver: false,
       message: "",
+      remainingTime: 10,
+      startGame: false,
     };
 
     // BINDS
     this.play = this.play.bind(this);
+    this.countdownTimer = this.countdownTimer.bind(this);
+    this.resetTimer = this.resetTimer.bind(this);
   }
 
   // INITIATE NEW GAME
@@ -40,6 +45,12 @@ class App extends React.Component {
         row.push(null);
       }
       board.push(row);
+      // Réinitialise le current player
+      this.setState({
+        currentPlayer: null,
+        startGame: false,
+        remainingTime: 10,
+      });
     }
 
     // STATE MODIFICATION
@@ -192,6 +203,51 @@ class App extends React.Component {
       this.checkDraw(board)
     );
   }
+  //! Partie timer
+
+  countdownTimer() {
+    setInterval(() => {
+      this.setState((prevState) => {
+        return { remainingTime: prevState.remainingTime - 1 };
+      });
+    }, 1000);
+  }
+  resetTimer() {
+    if (!this.state.gameOver) {
+      if (!this.state.startGame) {
+        this.countdownTimer();
+        this.setState({ startGame: true });
+      }
+      this.setState({ remainingTime: 10 });
+    }
+  }
+  componentDidUpdate() {
+    if (!this.state.gameOver) {
+      if (this.state.currentPlayer === 2) {
+        if (this.state.remainingTime === 0) {
+          return this.setState({
+            gameOver: true,
+            message: "Time out ! Player 1 (red) wins !!!",
+          });
+        }
+      } else if (this.state.currentPlayer === 1) {
+        if (this.state.remainingTime === 0) {
+          return this.setState({
+            gameOver: true,
+            message: "Time out ! Player 2 (yellow) wins !!!",
+          });
+        }
+      } else {
+        if (this.state.remainingTime === 0) {
+          return this.setState({
+            gameOver: true,
+            message: "Time out ! Draw game",
+          });
+        }
+      }
+    }
+  }
+  //! Fin de partie timer
 
   // INITIATE BOARD WHEN FIRST APPEARS ON SCREEN
   componentDidMount() {
@@ -212,12 +268,22 @@ class App extends React.Component {
               <tbody>
                 {/* ALL ROWS MAPPING TO GET THE ROW COMPONENT */}
                 {this.state.board.map((row, i) => (
-                  <Row key={i} row={row} play={this.play} />
+                  <Row
+                    key={i}
+                    row={row}
+                    play={this.play}
+                    resetTimer={this.resetTimer}
+                  />
                 ))}
               </tbody>
             </table>
 
+            {/* ****************  Timer création **************** */}
+            <Timer remainingTime={this.state.remainingTime}></Timer>
+            {/* ***************** Timer création **************** */}
+
             {/* RESET BUTTON */}
+
             <div
               className="button"
               onClick={() => {

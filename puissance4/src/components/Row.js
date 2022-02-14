@@ -12,12 +12,18 @@ import Cell from "./Cell";
 
 class Row extends React.Component {
   render() {
-    const { row, play } = this.props;
+    const { row, play, resetTimer } = this.props;
     return (
       <tr>
         {/* ALL CELLS MAPPING TO GET THE CELL COMPONENT */}
         {row.map((cell, i) => (
-          <Cell key={i} value={cell} columnIndex={i} play={play} />
+          <Cell
+            key={i}
+            value={cell}
+            columnIndex={i}
+            play={play}
+            resetTimer={resetTimer}
+          />
         ))}
       </tr>
     );

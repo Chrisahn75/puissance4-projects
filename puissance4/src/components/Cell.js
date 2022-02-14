@@ -10,7 +10,7 @@ import React from "react";
 
 class Cell extends React.Component {
   render() {
-    const { value, columnIndex, play } = this.props;
+    const { value, columnIndex, play, resetTimer } = this.props;
 
     // CHANGE CELL COLOR DEPENDING ON THE CURRENT PLAYER
     let color = "white"; // DEFAULT
@@ -27,6 +27,7 @@ class Cell extends React.Component {
           className="cell"
           onClick={() => {
             play(columnIndex);
+            resetTimer();
           }}
         >
           <div className={color}></div>

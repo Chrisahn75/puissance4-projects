@@ -280,3 +280,14 @@ table {
     height: 3rem;
   }
 }
+/* Timer */
+.timer {
+  text-shadow: 2px 0 0 rgb(255, 255, 255), -2px 0 0 rgb(255, 255, 255),
+    0 2px 0 rgb(255, 255, 255), 0 -2px 0 rgb(255, 255, 255),
+    1px 1px rgb(255, 255, 255), -1px -1px 0 rgb(255, 255, 255),
+    1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255);
+  margin-bottom: 4%;
+  font-size: 7rem;
+  font-family: "oleo bold";
+  color: #f15930;
+}
